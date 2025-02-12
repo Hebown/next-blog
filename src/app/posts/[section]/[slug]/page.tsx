@@ -11,7 +11,7 @@ export default async function ArticlePage({
   const { section, slug } = await params;
 
   // 获取文章文件夹路径和 markdown 文件路径
-  const articleDir = path.join(process.cwd(), process.env.CONTENT_PATH||'content', section, slug);
+  const articleDir = path.join(process.cwd(), process.env.CONTENT_PATH, section, slug);
   const mdFilePath = path.join(articleDir, slug + '.md');
 
   // 读取 Markdown 内容

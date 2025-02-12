@@ -4,7 +4,7 @@ import path from 'path';
 
 export default async function PostPage() {
   // 获取分区信息
-  const sectionsDir = path.join(process.cwd(), process.env.CONTENT_PATH||'content'); // 假设分区文件夹存储在content目录下
+  const sectionsDir = path.join(process.cwd(), process.env.CONTENT_PATH); // 假设分区文件夹存储在content目录下
   const sectionFolders = fs.readdirSync(sectionsDir); // 获取目录中的文件夹列表
 
   // 创建分区信息数组
@@ -19,7 +19,7 @@ export default async function PostPage() {
       <ul>
         {sections.map((section) => (
           <li key={section.path}>
-            <a href={`posts/${section.path}`}>{section.name}</a>
+            <a href={`${section.path}`}>{section.name}</a>
           </li>
         ))}
       </ul>
