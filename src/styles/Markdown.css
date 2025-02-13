@@ -1,0 +1,165 @@
+:where(.markdown-body) {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    word-wrap: break-word;
+    padding: 1em;  
+    border-radius: 10px;  
+    
+  }
+  
+  :where(.markdown-body h1) {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    margin: 0.67em 0;
+  }
+  
+  :where(.markdown-body h2) {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    margin: 0.83em 0;
+  }
+  
+  :where(.markdown-body h3) { font-size: 1.25em; margin: 1em 0; }
+  :where(.markdown-body h4) { font-size: 1em; margin: 1.33em 0; }
+  :where(.markdown-body h5) { font-size: 0.875em; margin: 1.67em 0; }
+  :where(.markdown-body h6) { font-size: 0.85em; color: #6a737d; margin: 2.33em 0; }
+  
+  /* 段落和文字 */
+  :where(.markdown-body p) {
+    margin: 1em 0;
+  }
+  
+  /* 列表 */
+  :where(.markdown-body ul),
+  :where(.markdown-body ol) {
+    padding-left: 2em;
+    margin: 1em 0;
+  }
+  
+  :where(.markdown-body li) {
+    margin: 0.25em 0;
+    line-height: 1.8;
+  }
+  
+  :where(.markdown-body li > p) {
+    margin: 0.5em 0;
+  }
+  
+  /* 代码 */
+  :where(.markdown-body code) {
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    background-color: #f6f8fa;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 85%;
+  }
+  
+  :where(.markdown-body pre) {
+    background-color: #f6f8fa;
+    padding: 1em;
+    overflow: auto;
+    border-radius: 6px; /* 给代码块添加圆角 */
+    line-height: 1.45;
+    margin: 1em 0;
+  }
+  
+  /* 引用 */
+  :where(.markdown-body blockquote) {
+    border-left: 4px solid #93979a;
+    background-color: #dfe4e8;
+    margin: 1.5em 0;
+    padding: 1 1em;
+    border-radius: 5px;  /* 给引用添加圆角 */
+  }
+  
+  /* 表格 */
+  :where(.markdown-body table) {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+    border-radius: 6px; /* 给表格添加圆角 */
+  }
+  
+  :where(.markdown-body th),
+  :where(.markdown-body td) {
+    border: 1px solid #dfe2e5;
+    padding: 0.6em 1em;
+  }
+  
+  :where(.markdown-body th) {
+    background-color: #f6f8fa;
+    font-weight: 600;
+  }
+  
+  :where(.markdown-body tr:nth-child(even)) {
+    background-color: #f6f8fa;
+  }
+  
+  /* 链接 */
+  :where(.markdown-body a) {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  :where(.markdown-body a:hover) {
+    text-decoration: underline;
+  }
+  
+  /* 图片 */
+  :where(.markdown-body img) {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+    border-radius: 8px;  /* 给图片添加圆角 */
+  }
+  
+  /* 分割线 */
+  :where(.markdown-body hr) {
+    border: 0;
+    height: 1px;
+    background: #e1e4e8;
+    margin: 2em 0;
+    border-radius: 5px;  /* 给分割线添加圆角 */
+  }
+  
+  /* 响应式处理 */
+  @media (max-width: 768px) {
+    :where(.markdown-body) {
+      font-size: 16px;
+      padding: 0 1em;
+    }
+  
+    :where(.markdown-body pre) {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+  
+  /* 可选：深色模式支持 */
+  @media (prefers-color-scheme: dark) {
+    .markdown-article{
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 36px 0px, rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+    }
+    :where(.markdown-body) {
+      color: #c9d1d9;
+    }
+  
+    :where(.markdown-body code),
+    :where(.markdown-body pre) {
+      background-color: #161b22;
+    }
+  
+    :where(.markdown-body a) {
+      color: #58a6ff;
+    }
+  
+    :where(.markdown-body th),
+    :where(.markdown-body tr:nth-child(even)) {
+      background-color: #161b22;
+    }
+    :where(.markdown-body blockquote){
+        background-color: #333;
+    }
+  }
+  

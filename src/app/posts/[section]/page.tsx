@@ -6,7 +6,7 @@ export default async function SectionPage({ params }: { params: Promise<{ sectio
   const { section } = await params; // 从路径中获取当前分区名称
 
   // 假设文章存放在content文件夹下
-  const sectionDir = path.join(process.cwd(), process.env.CONTENT_PATH, section); // 当前分区的路径
+  const sectionDir = path.join(process.cwd(), process.env.POST_CONTENT_PATH, section); // 当前分区的路径
   const articleFolders = fs.readdirSync(sectionDir); // 获取该分区下的文件夹（每个文件夹代表一篇文章）
 
   // 获取每篇文章的信息

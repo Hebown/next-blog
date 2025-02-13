@@ -1,6 +1,7 @@
 declare namespace NodeJS {
     interface ProcessEnv {
-      CONTENT_PATH: string;
+      POST_CONTENT_PATH: string;
+      PROFILE_CONTENT_PATH:string;
     }
   }
   
